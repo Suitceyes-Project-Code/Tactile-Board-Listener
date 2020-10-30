@@ -1,0 +1,12 @@
+{
+  "ServerUri" : "mqtt.ably.io",
+  "Port" : 8883,
+  "CleanSession": true,
+  "Username" : "GIn8xA.lwvRbg",
+  "Password": "mmkCycAbnYQvmZxS",
+  "SSL_TLS": true,
+  "Topics" : [
+      "suitceyes/tactile-board/test",
+      "suitceyes/tactile-board/play"
+  ]
+}
