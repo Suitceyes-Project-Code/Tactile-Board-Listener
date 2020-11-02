@@ -1,5 +1,5 @@
 # Tactile Board Listener
-This repository contains code for the Python scripts that are responsible for listening for messages that arrive from the Tactile Board application through the MQTT message bus.
+This repository contains code for the Python scripts that are responsible for listening for messages that arrive from the Tactile Board<sup>[1](#ft_1)</sup> application through the MQTT message bus.
 
 ## Requirements
 - For USB: PyCmdMessenger (https://pypi.org/project/PyCmdMessenger/)
@@ -23,3 +23,6 @@ Use the respective COM port (e.g. "COM3").
 
 ## Authors
 - James Gay (james.gay@hs-offenburg.de)
+
+## Footnotes
+<a name=ft_1><sup>1</sup></a> Arthur Theil, Lea Buchweitz, James Gay, Eva Lindell, Li Guo, Nils-Krister Persson, and Oliver Korn. 2020. Tactile Board: A Multimodal Augmentative and Alternative Communication Device for Individuals with Deafblindness. In 19th International Conference on Mobile and Ubiquitous Multimedia (MUM 2020), November 22–25, 2020, Essen, Germany. ACM, New York, NY, USA, 6 pages. https://doi.org/10.1145/3428361.3428465
