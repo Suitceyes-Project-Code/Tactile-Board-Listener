@@ -4,6 +4,7 @@ title: Home
 nav_order: 1
 permalink: /
 ---
+
 # Home
 This repository contains code for the Python scripts that are responsible for listening for messages that arrive from the Tactile Board<sup>[1](#ft_1)</sup> application through the MQTT message bus.
 
