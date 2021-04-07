@@ -2,8 +2,10 @@ from MqttMessageService import MqttMessageService
 from VibrationPatternPlayer import VibrationPatternPlayer
 from VestDeviceBase import DummyVestDevice
 from HaptogramService import HaptogramService
-from I2CVibrationDevice import I2CVestDevice
+# from I2CVibrationDevice import I2CVestDevice
+from MotorDriver import MotorDriver
 import json
+import time
 
 class TactileBoardListener:
     def __init__(self, message_bus, haptogram_service):
@@ -16,13 +18,15 @@ class TactileBoardListener:
         return
 
 if __name__ == "__main__":
-    with I2CVestDevice(0x40) as vest_device, MqttMessageService() as mb:
-        vpp = VibrationPatternPlayer(vest_device)
+    with DummyVestDevice() as vest_device, MqttMessageService() as mb:    
+    #with I2CVestDevice(0x40) as vest_device, MqttMessageService() as mb:
+        motor_driver = MotorDriver(vest_device)
+        vpp = VibrationPatternPlayer(motor_driver)
         hs = HaptogramService(vpp, 2.0, 0.1)
         hs.start()
         listener = TactileBoardListener(mb, hs)
 
         while True:
-            pass
+            time.sleep(1)
     
         hs.stop()

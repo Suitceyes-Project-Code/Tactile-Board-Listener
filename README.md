@@ -21,6 +21,11 @@ with UsbVestDevice("YOUR_COM_PORT") as vest_device, MqttMessageService() as mb:
 ```
 Use the respective COM port (e.g. "COM3").
 
+### Config
+A configuration file is provided to adjust certain settings such as the MQTT broker endpoint and the required credentials.
+
+Additionally, it is possible to redirect the activation of a pin to another. This can be done by setting the `OverridePinLayout` value to `true`. When doing so the program will use the values provide in the `Layout` property.
+
 ## Authors
 - James Gay (james.gay@hs-offenburg.de)
 
