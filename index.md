@@ -8,17 +8,17 @@ permalink: /
 # Home
 This repository contains code for the Python scripts that are responsible for listening for messages that arrive from the Tactile Board<sup>[1](#ft_1)</sup> application through the MQTT message bus.
 
-If you are looking for the repository of the Android application, click [here](). 
+If you are looking for the repository of the Android application, click [here](https://github.com/AffectiveCognitiveInstitute/Tactile-Board). 
 
 The following video demonstrates how the Tactile Board is used.
 
 [![Tactile Board Demonstration Video](http://img.youtube.com/vi/36bj-6xvPmU/0.jpg)](http://www.youtube.com/watch?v=36bj-6xvPmU)
 
 ## Requirements
-- For USB: PyCmdMessenger (https://pypi.org/project/PyCmdMessenger/)
-- For BLE: bluepy (https://pypi.org/project/bluepy/)
-- For I2C: adafruit-pca9685 (https://github.com/adafruit/Adafruit_Python_PCA9685)
-- Paho MQTT Client: paho-mqtt (https://pypi.org/project/paho-mqtt/)
+- For USB: PyCmdMessenger [https://pypi.org/project/PyCmdMessenger/](https://pypi.org/project/PyCmdMessenger/)
+- For BLE: bluepy [https://pypi.org/project/bluepy/](https://pypi.org/project/bluepy/)
+- For I2C: adafruit-pca9685 [https://github.com/adafruit/Adafruit_Python_PCA9685](https://github.com/adafruit/Adafruit_Python_PCA9685)
+- Paho MQTT Client: paho-mqtt [https://pypi.org/project/paho-mqtt/](https://pypi.org/project/paho-mqtt/)
 
 ## Setup
 Install the above named python packages via pip. To execute, simply run the command from the root directory:
@@ -35,7 +35,7 @@ with UsbVestDevice("YOUR_COM_PORT") as vest_device, MqttMessageService() as mb:
 Use the respective COM port (e.g. "COM3").
 
 ### Config
-A configuration file is provided to adjust certain settings such as the MQTT broker endpoint and the required credentials. See the configuration page [here]() for further details.
+A configuration file is provided to adjust certain settings such as the MQTT broker endpoint and the required credentials. See the configuration page [here](docs/Configuration.md) for further details.
 
 Additionally, it is possible to redirect the activation of a pin to another. This can be done by setting the `OverridePinLayout` value to `true`. When doing so the program will use the values provide in the `Layout` property.
 
