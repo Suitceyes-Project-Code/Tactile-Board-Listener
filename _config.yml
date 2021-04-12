@@ -17,3 +17,5 @@ back_to_top_text: "Back to top"
 # Enable or disable the site search
 # Supports true (default) or false
 search_enabled: true
+
+search.heading_level: 1
